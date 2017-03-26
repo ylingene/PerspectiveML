@@ -1,5 +1,7 @@
 .DS_Store
 data_set/
+config.pyc
+config.py
 
 # Logs
 logs

@@ -4,7 +4,7 @@ export default class Spotlight extends React.Component {
   render() {
     return (
       <div id="spotlight">
-        <img src={this.props.spot_src}/>
+        <img title={this.props.focal} src={this.props.spot_src}/>
       </div>
     );
   }

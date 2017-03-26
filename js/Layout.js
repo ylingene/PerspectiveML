@@ -9,20 +9,24 @@ export default class Layout extends React.Component {
   constructor() {
     super();
     this.state = {
-      spot_src: "default.png"
+      spot_src: "default.png",
+      focal: 69,
     };
   }
 
-  changeSpot(spot_src) {
-    this.setState({spot_src});
+  changeSpot(spot_src, focal) {
+    console.log(focal);
+    this.setState({spot_src, focal});
   }
 
   render() {
     return (
       <div>
         <Header />
-        <Link to="second">Go to second page</Link>
-        <Spotlight spot_src={this.state.spot_src} />
+        <h4>Upload your own image <Link to="second">here</Link></h4>
+        <Spotlight focal={this.state.focal} spot_src={this.state.spot_src} />
+        <h4 id="prompt">Choose a photo to see if you can guess the focal length</h4>
+        <h6>Hover over the above photo to see the correct focal length</h6>
         <Stage changeSpot={this.changeSpot.bind(this)} />
       </div>
     );

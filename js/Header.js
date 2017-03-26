@@ -5,7 +5,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <Link to="/"><header>
-        <h1 id="title">Perspective ML</h1>
+        <h1 id="title">PerspectiveML</h1>
       </header></Link>
     );
   }

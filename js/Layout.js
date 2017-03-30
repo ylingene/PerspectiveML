@@ -9,7 +9,7 @@ export default class Layout extends React.Component {
   constructor() {
     super();
     this.state = {
-      spot_src: "default.png",
+      spot_src: "static/default.png",
       focal: 69,
     };
   }

@@ -36,9 +36,9 @@ For testing through python, change and run this code.
 import numpy as np
 import tensorflow as tf
 
-imagePath = '../data_set/85mm/_14089913467_m.jpg'
-modelFullPath = 'output_graph.pb'
-labelsFullPath = 'output_labels.txt'
+imagePath = '../imgs/1.jpg'
+modelFullPath = 'static/output_graph.pb'
+labelsFullPath = 'static/output_labels.txt'
 
 
 def create_graph():

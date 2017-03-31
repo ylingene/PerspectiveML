@@ -9,9 +9,7 @@ app = Flask(__name__, template_folder='templates')
 # Register the api
 app.register_blueprint(api.api_class_img)
 app.register_blueprint(controllers.main)
-# app.register_blueprint(api.api_login, url_prefix='/epx1dnii/p3')
-# app.register_blueprint(api.api_pic, url_prefix='/epx1dnii/p3')
-# app.register_blueprint(api.api_user, url_prefix='/epx1dnii/p3')
+app.register_blueprint(controllers.controllers_class_img)
 
 # Listen on external IPs
 # For us, listen to port 3000 so you can just run 'python app.py' to start the server

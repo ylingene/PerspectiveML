@@ -3,6 +3,8 @@ data_set/
 config.pyc
 config.py
 
+venv/*
+
 # Logs
 logs
 *.log

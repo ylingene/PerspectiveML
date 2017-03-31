@@ -1,5 +1,5 @@
 from flask import *
-from model import run_inference_on_image
+from model.classify_image import run_inference_on_image
 
 api_class_img = Blueprint('api_class_img', __name__)
 

@@ -8,7 +8,7 @@ function ajaxCall() {
   console.log($("input[name='focal']:checked").val());
   $.ajax({
     type: "POST",
-    url: "/api/v1/class_img",
+    url: "http://0.0.0.0:3000/api/v1/class_img",
     data:
     {
       name: $("#fileIn").val().split('\\').slice(-1).join(''),

@@ -3,24 +3,47 @@ import React from "react";
 
 import Header from "./Header";
 
-// function ajaxCall() {
-//   console.log($("#fileIn").val().split('\\').slice(-1).join(''));
-//   console.log($("input[name='focal']:checked").val());
-//   $.ajax({
-//     type: "POST",
-//     url: "http://0.0.0.0:3000/api/v1/class_img",
-//     data:
-//     {
-//       name: $("#fileIn").val().split('\\').slice(-1).join(''),
-//       // focal: $("input[name='focal']:checked").val()
-//     },
-//     success: function() {
-//       console.log("Success!");
-//       return false;
-//     },
-//     dataType: 'json'
-//   });
-// }
+function ajaxCall() {
+  console.log($("#fileIn").val().split('\\').slice(-1).join(''));
+  var files  = document.getElementById('fileIn')
+  formData = new FormData();
+
+  // Loop through each of the selected files.
+  for (var i = 0; i < files.length; i++) {
+    var file = files[i];
+
+    // Check the file type. Checks if it's an image
+    if (!file.type.match('image.*')) {
+      continue;
+    }
+
+    // Add the file to the request.
+    // formData.append(name, file, filename);
+    formData.append('image', file, '');
+  }
+
+  // console.log($("input[name='focal']:checked").val());
+  $.ajax({
+    type: "POST",
+    // contentType: "application/json; charset=UTF-8",
+    url: "http://0.0.0.0:3000/api/v1/class_img",
+    data:
+    {
+      // name: $("#fileIn").val().split('\\').slice(-1).join(''),
+      // focal: $("input[name='focal']:checked").val()
+      formData
+    },
+    dataType: 'json',
+    success: function(data) {
+      console.log("Success!");
+      focal_length = data.focal_length
+      return false;
+    },
+    error: function(xhr) {
+      printErrorsJSON(JSON.parse(xhr.responseText)["errors"]);
+    }
+  });
+}
 
 export default class Second extends React.Component {
   render() {

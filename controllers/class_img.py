@@ -10,8 +10,7 @@ def get_image_class(imgpath):
 
 @controllers_class_img.route('/class_img', methods=['POST'])
 def controllers_class_img_route():
-    options = {
-    }
+    options = {}
     if request.method == 'POST':
         file = request.files["file"] # get the file data field from the JSON object
         if file:

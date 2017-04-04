@@ -21391,7 +21391,7 @@ var Layout = function (_React$Component) {
           "Upload your own image ",
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: "/second" },
+            { to: "/upload" },
             "here"
           )
         ),
@@ -21417,152 +21417,8 @@ var Layout = function (_React$Component) {
 exports.default = Layout;
 
 /***/ }),
-/* 129 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(183);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Header = __webpack_require__(49);
-
-var _Header2 = _interopRequireDefault(_Header);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// function ajaxCall() {
-//   console.log($("#fileIn").val().split('\\').slice(-1).join(''));
-//   console.log($("input[name='focal']:checked").val());
-//   $.ajax({
-//     type: "POST",
-//     url: "http://0.0.0.0:3000/api/v1/class_img",
-//     data:
-//     {
-//       name: $("#fileIn").val().split('\\').slice(-1).join(''),
-//       // focal: $("input[name='focal']:checked").val()
-//     },
-//     success: function() {
-//       console.log("Success!");
-//       return false;
-//     },
-//     dataType: 'json'
-//   });
-// }
-
-var Second = function (_React$Component) {
-  _inherits(Second, _React$Component);
-
-  function Second() {
-    _classCallCheck(this, Second);
-
-    return _possibleConstructorReturn(this, (Second.__proto__ || Object.getPrototypeOf(Second)).apply(this, arguments));
-  }
-
-  _createClass(Second, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(_Header2.default, null),
-        _react2.default.createElement(
-          "form",
-          { action: "http://0.0.0.0:3000/class_img", method: "post", encType: "multipart/form-data" },
-          _react2.default.createElement("input", { type: "file", name: "file", id: "fileIn" }),
-          _react2.default.createElement(
-            "button",
-            { type: "submit" /*onClick={ ajaxCall }*/ },
-            "Submit"
-          )
-        )
-      );
-    }
-  }]);
-
-  return Second;
-}(_react2.default.Component);
-
-exports.default = Second;
-
-/***/ }),
-/* 130 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Header = __webpack_require__(49);
-
-var _Header2 = _interopRequireDefault(_Header);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var SecondReturn = function (_React$Component) {
-  _inherits(SecondReturn, _React$Component);
-
-  function SecondReturn() {
-    _classCallCheck(this, SecondReturn);
-
-    return _possibleConstructorReturn(this, (SecondReturn.__proto__ || Object.getPrototypeOf(SecondReturn)).apply(this, arguments));
-  }
-
-  _createClass(SecondReturn, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-          "h1",
-          null,
-          "Your input focal length is ",
-          this.props.match.params.focalParam
-        )
-      );
-    }
-  }]);
-
-  return SecondReturn;
-}(_react2.default.Component);
-
-exports.default = SecondReturn;
-
-/***/ }),
+/* 129 */,
+/* 130 */,
 /* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22490,13 +22346,13 @@ var _Layout = __webpack_require__(128);
 
 var _Layout2 = _interopRequireDefault(_Layout);
 
-var _Second = __webpack_require__(129);
+var _Upload = __webpack_require__(323);
 
-var _Second2 = _interopRequireDefault(_Second);
+var _Upload2 = _interopRequireDefault(_Upload);
 
-var _SecondReturn = __webpack_require__(130);
+var _UploadReturn = __webpack_require__(324);
 
-var _SecondReturn2 = _interopRequireDefault(_SecondReturn);
+var _UploadReturn2 = _interopRequireDefault(_UploadReturn);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22507,8 +22363,8 @@ _reactDom2.default.render(_react2.default.createElement(
     "div",
     null,
     _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _Layout2.default }),
-    _react2.default.createElement(_reactRouterDom.Route, { path: "/second", component: _Second2.default }),
-    _react2.default.createElement(_reactRouterDom.Route, { path: "/second/:focalParam", component: _SecondReturn2.default })
+    _react2.default.createElement(_reactRouterDom.Route, { path: "/upload", component: _Upload2.default }),
+    _react2.default.createElement(_reactRouterDom.Route, { path: "/upload/:focalParam", component: _UploadReturn2.default })
   )
 ), document.getElementById('doc'));
 
@@ -73301,6 +73157,188 @@ exports.default = valueEqual;
 /***/ (function(module, exports) {
 
 /* (ignored) */
+
+/***/ }),
+/* 323 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(183);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Header = __webpack_require__(49);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Upload = function (_React$Component) {
+  _inherits(Upload, _React$Component);
+
+  function Upload() {
+    _classCallCheck(this, Upload);
+
+    return _possibleConstructorReturn(this, (Upload.__proto__ || Object.getPrototypeOf(Upload)).apply(this, arguments));
+  }
+
+  _createClass(Upload, [{
+    key: "render",
+
+    // ajaxCall() {
+    //   var files  = $('#uploadFile');
+    //   // console.log(files);
+    //   var formData = new FormData();
+    //   formData.append('image', files[0]);
+    //   console.log(formData);
+    //
+    //   // Loop through each of the selected files.
+    //   // for (var i = 0; i < files.length; i++) {
+    //   //   var file = files[i];
+    //   //
+    //   //   // Check the file type. Checks if it's an image
+    //   //   if (!file.type.match('image.*')) {
+    //   //     continue;
+    //   //   }
+    //
+    //   // Add the file to the request.
+    //   // formData.append(name, file, filename);
+    //   // }
+    //
+    //   // console.log($("input[name='focal']:checked").val());
+    //   $.ajax({
+    //     type: "POST",
+    //     // contentType: "application/json; charset=UTF-8",
+    //     url: "http://0.0.0.0:3000/api/v1/class_img",
+    //     data: formData,
+    //     processData: false,
+    //     contentType: false,
+    //     success: function(data) {
+    //       var focal_length = data.focal_length;
+    //       console.log(focal_length);
+    //       return false;
+    //     },
+    //     error: function(xhr) {
+    //       () => JSON.parse(xhr.responseText)["errors"];
+    //     }
+    //   });
+    // }
+    //
+    // makeReq() {
+    //   var postReq = {
+    //     method: 'POST',
+    //     data: new FormData($("#uploadFile")[0]),
+    //     processData: false,
+    //     contentType: false
+    //   };
+    //
+    //   console.log(new FormData($("#uploadFile")[0]))
+    //
+    //   fetch("http://0.0.0.0:3000/api/v1/class_img", postReq).then((data) => {
+    //     console.log(data.focal_length);
+    //   })
+    // }
+
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(_Header2.default, null),
+        _react2.default.createElement(
+          "form",
+          { action: "http://0.0.0.0:3000/class_img", method: "post", encType: "multipart/form-data" },
+          _react2.default.createElement("input", { type: "file", name: "file", id: "fileIn" }),
+          _react2.default.createElement(
+            "button",
+            { type: "submit" /*onClick={ this.makeReq }*/ },
+            "Submit"
+          )
+        )
+      );
+    }
+  }]);
+
+  return Upload;
+}(_react2.default.Component);
+
+exports.default = Upload;
+
+/***/ }),
+/* 324 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Header = __webpack_require__(49);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var UploadReturn = function (_React$Component) {
+  _inherits(UploadReturn, _React$Component);
+
+  function UploadReturn() {
+    _classCallCheck(this, UploadReturn);
+
+    return _possibleConstructorReturn(this, (UploadReturn.__proto__ || Object.getPrototypeOf(UploadReturn)).apply(this, arguments));
+  }
+
+  _createClass(UploadReturn, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+          "h1",
+          null,
+          "The predicted input focal length is ",
+          this.props.match.params.focalParam
+        )
+      );
+    }
+  }]);
+
+  return UploadReturn;
+}(_react2.default.Component);
+
+exports.default = UploadReturn;
 
 /***/ })
 /******/ ]);

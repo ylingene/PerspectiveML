@@ -33,9 +33,12 @@ def api_class_img_post(file):
 @api_class_img.route('/api/v1/class_img', methods=['POST'])
 def api_class_img_route():
     options = {}
-    return render_template("index.html", **options)
     if request.method == 'POST':
-        print "KappaPost"
-        file = request.files["file"] # get the file data field from the JSON object
-        return api_class_img_post(file)
+        if 'file' not in request.files:
+            print 'No file part'
+        else:
+            print request.files["file"].filename
+        # file = request.files["file"] # get the file data field from the JSON object
+        # return api_class_img_post(file)
+        return jsonify(focal_length = "50mm"), 200
     return jsonify(""), 404

@@ -22,6 +22,6 @@ def controllers_class_img_route():
                 file.save(os.path.join('static/images/', '{}.{}'.format(hash_name, file_format)))
         # return get_image_class('..images/' + hash_name + '.' + file_format)
         predicted_focal = get_image_class('static/images/' + hash_name + '.' + file_format)
-        return redirect("{}{}{}".format(url_for("main.main_route"),"#/second/",predicted_focal))
+        return redirect("{}{}{}".format(url_for("main.main_route"),"#/upload/",predicted_focal))
     # return render_template("index.html", **options)
     return redirect(url_for("main.main_route"))

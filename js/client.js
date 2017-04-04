@@ -4,15 +4,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import Layout from "./Layout";
-import Second from "./Second";
-import SecondReturn from "./SecondReturn";
+import Upload from "./Upload";
+import UploadReturn from "./UploadReturn";
 
 ReactDOM.render(
   <HashRouter>
     <div>
       <Route exact path="/" component={ Layout } />
-      <Route path="/second" component={ Second } />
-      <Route path="/second/:focalParam" component={ SecondReturn } />
+      <Route path="/upload" component={ Upload } />
+      <Route path="/upload/:focalParam" component={ UploadReturn } />
     </div>
   </HashRouter>
   , document.getElementById('doc'));

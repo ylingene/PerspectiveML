@@ -40,5 +40,5 @@ def api_class_img_route():
             print request.files["file"].filename
         # file = request.files["file"] # get the file data field from the JSON object
         # return api_class_img_post(file)
-        return jsonify(focal_length = "50mm"), 200
+        return jsonify(focal_length = "85mm"), 200
     return jsonify(""), 404
